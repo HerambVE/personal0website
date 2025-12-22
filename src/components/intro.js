@@ -19,7 +19,7 @@ export default function Intro(){
         <div className="w-1/2 h-fit relative overflow-hidden">
         <img src="/trial.png" alt="Greetings" className="fixed top-[6%] left-[0%] z-[-10] w-[60%] h-auto"/>
         </div>
-        <div className="flex justify-end w-1/2 h-[100%]">
+        <div className="flex justify-end w-1/2 h-full">
             <div className='flex-col-reverse text-right justify-items-end my-[25%] ml-[5%]'>
             <Typewriter idleBlink={1150} pause={7000} loop={false} afterBlink={700} text="Hello,"/>
             <br />
