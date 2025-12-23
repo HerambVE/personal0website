@@ -1,10 +1,31 @@
 "use client";
 import { useEffect, useState } from "react";
+import {
+  roboto,
+  tourney,
+  silkscreen,
+  courierPrime,
+  poppins,
+  kalam,
+} from "../lib/fonts";
+
+/**
+ * Fonts that REQUIRE `.className`
+ * (non-system, loaded via next/font)
+ */
+const FONT_CLASS_MAP = {
+  roboto: roboto.className,
+  tourney: tourney.className,
+  silkscreen: silkscreen.className,
+  courier: courierPrime.className,
+  poppins: poppins.className,
+  kalam: kalam.className,
+};
 
 export default function Typewriter({
   text,
   color = "text-emerald-50",
-  font = "font-mono",
+  font = "font-mono", // can be "kalam", "tourney", OR "font-mono"
   size = "text-9xl",
 
   speed = 0.1,
@@ -13,40 +34,32 @@ export default function Typewriter({
   afterBlink = 750,
   pause = 10000,
 
-  loop = true
+  loop = true,
 }) {
   const [phase, setPhase] = useState("hidden");
-  const [runId, setRunId] = useState(0); // used ONLY to restart CSS animation
+  const [runId, setRunId] = useState(0);
 
   const duration = text.length * speed * 1000;
 
   useEffect(() => {
-    let timers = [];
+    const timers = [];
 
     const schedule = (fn, delay) => {
       const t = setTimeout(fn, delay);
       timers.push(t);
     };
 
-    // Cursor appears
     schedule(() => setPhase("idle"), cursorDelay);
-
-    // Start typing
     schedule(() => setPhase("typing"), cursorDelay + idleBlink);
-
-    // Typing done
     schedule(() => setPhase("done"), cursorDelay + idleBlink + duration);
-
-    // Hide cursor
     schedule(
       () => setPhase("hidden"),
       cursorDelay + idleBlink + duration + afterBlink
     );
 
-    // Restart cycle
     if (loop) {
       schedule(() => {
-        setRunId(id => id + 1);   // 🔁 restart animation safely
+        setRunId((id) => id + 1);
         setPhase("hidden");
       }, cursorDelay + idleBlink + duration + afterBlink + pause);
     }
@@ -60,9 +73,10 @@ export default function Typewriter({
     idleBlink,
     afterBlink,
     pause,
-    loop
+    loop,
   ]);
 
+  /* Cursor behavior */
   const cursorClass =
     phase === "idle"
       ? "cursor cursor-blink"
@@ -70,24 +84,27 @@ export default function Typewriter({
       ? "cursor"
       : "";
 
+  /* 🔑 Font resolution logic */
+  const resolvedFontClass =
+    FONT_CLASS_MAP[font] ?? font; // use .className if known, else raw class
+
   return (
     <h1
+      key={runId}
       className={`
         typewriter
         ${cursorClass}
         inline-block
         w-fit
-        font-black
         ${size}
         ${color}
-        ${font}
+        ${resolvedFontClass}
       `}
       style={{
         "--chars": text.length,
         "--duration": `${duration / 1000}s`,
-        animationPlayState: phase === "typing" ? "running" : "paused"
+        animationPlayState: phase === "typing" ? "running" : "paused",
       }}
-      key={runId}   /* ✅ SAFE: only affects CSS animation */
     >
       {text}
     </h1>
