@@ -7,7 +7,8 @@ import {
   courierPrime,
   poppins,
   kalam,
-} from "../lib/fonts";
+  gabarito
+} from "./fonts";
 
 /**
  * Fonts that REQUIRE `.className`

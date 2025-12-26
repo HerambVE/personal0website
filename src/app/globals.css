@@ -4,7 +4,7 @@ html, body {
   height: 100%;
 }
 
-body {
+body,.background {
   font-family: 'Courier New', Courier, monospace;
   background-image: url("/bg-black-no-pattern.png");
   background-size: cover;

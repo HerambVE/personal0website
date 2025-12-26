@@ -1,8 +1,24 @@
-import Intro from '../components/intro';
-export default function Home() {
+"use client";
+
+import { useRouter } from "next/navigation";
+
+export default function LandingPage() {
+  const router = useRouter();
+
   return (
-      <div className="flex min-h-screen w-full flex-col items-center justify-between px-12 sm:items-start backdrop-blur-[0.01em]"> 
-        <Intro></Intro>
-      </div>
+    <main style={{ padding: "4rem"}}>
+      <h1>Choose Mode</h1>
+
+      <button
+        onClick={() => router.push("/pro")}
+        style={{ marginRight: "1rem" }}
+      >
+        Professional
+      </button>
+
+      <button onClick={() => router.push("/in")}>
+        Informal
+      </button>
+    </main>
   );
 }

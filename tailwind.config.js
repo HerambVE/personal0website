@@ -1,22 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './src/**/*.{js,ts,jsx,tsx}',
+    "./src/app/**/*.{js,ts,jsx,tsx}",
+    "./src/styles/**/*.{js,ts,jsx,tsx}",
   ],
 
   theme: {
     extend: {
       keyframes: {
         wiggleY: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(8px)' },
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(8px)" },
         },
       },
       animation: {
-        wiggleY: 'wiggleY 1s ease-in-out infinite',
+        wiggleY: "wiggleY 1s ease-in-out infinite",
       },
     },
   },

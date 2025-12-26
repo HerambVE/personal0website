@@ -8,12 +8,18 @@ import {
   Anek_Devanagari,
   Poppins,
   Kalam,
+  Gabarito
 } from "next/font/google";
 
 /* =========================
    Existing fonts
    ========================= */
 
+export const gabarito = Gabarito({
+  subset:["latin"],
+  weight: ["400","500","600","700","800","900"],
+  display:"swap",
+});
 export const roboto = Roboto({
   subsets: ["latin", "devanagari"],
   weight: ["400", "700"],

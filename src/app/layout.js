@@ -1,10 +1,11 @@
-import "./globals.css";
 import {
   roboto,
   tourney,
   silkscreen,
   courierPrime,
-} from "../lib/fonts";
+  poppins
+} from "../styles/fonts";
+import "./globals.css"
 
 export const metadata = {
   title: "Heramb Vengurlekar - Portfolio Website",
@@ -48,7 +49,13 @@ export default function RootLayout({ children }) {
         ${courierPrime.className}
       `}
     >
-      <body>{children}</body>
+      <body>
+      {children}
+      <footer className="text-amber-50 text-center ${poppins.className}">
+        © 2025 Your Name
+      </footer>
+      </body>
+      
     </html>
   );
 }
