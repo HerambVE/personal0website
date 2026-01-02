@@ -12,10 +12,10 @@ import {
 import "../../../globals.css"
 export default function Home() {
   return (
-      <div className="flex h-[99vh] w-full flex-col items-center justify-between px-[7%] sm:items-start backdrop-blur-[0.01em]"> 
+      <div className="flex h-[99vh] w-full flex-col items-center justify-between px-[5%] relative z-[-1] sm:items-start backdrop-blur-[0.01em]"> 
         <div className="relative flex w-full h-full items-center pt-[3%]">
           <div className="w-[50%] relative overflow-y-clip">
-            <img src="/flower-Photoroom-1.png" alt="Greetings" className="fixed top-[5vh] left-[2%] z-[-10] w-[55%] h-auto"/>
+            <img src="/flower-Photoroom-1.png" alt="Greetings" className="fixed top-[6vh] left-[2%] z-[-10] w-[55%] h-auto"/>
           </div>
           <div className="flex justify-end w-[50%] h-full">
             <div className='flex-col-reverse w-fit h-fit text-right justify-items-end pr-0 pb-[2%] mt-[16%]'>
@@ -27,7 +27,7 @@ export default function Home() {
             <div className="absolute bottom-[0%] right-[20%] z-10">
               <Caret />
             </div>
-        </  div>
+        </div>
       </div>
   );
 }

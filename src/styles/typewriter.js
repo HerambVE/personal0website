@@ -29,7 +29,7 @@ export default function Typewriter({
   font = "font-mono", // can be "kalam", "tourney", OR "font-mono"
   size = "text-9xl",
 
-  speed = 0.1,
+  speed = 0.13,
   cursorDelay = 0,
   idleBlink = 1500,
   afterBlink = 750,

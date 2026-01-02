@@ -1,0 +1,52 @@
+[
+  {
+    "name": "sentiment-analysis",
+    "description": "Sentiment analysis project exploring Python and basic AWS Lambda concepts.",
+    "type": "personal",
+    "primary_language": "Python",
+    "technologies": ["Sentiment Analysis", "AWS Lambda"],
+    "experience_weight": 88,
+    "is_fork": false,
+    "url": "https://github.com/HerambVE/sentiment0analysis"
+  },
+  {
+    "name": "chat-bot",
+    "description": "Chatbot implementation using Jupyter Notebook, exploring ML/NLP concepts.",
+    "type": "personal",
+    "primary_language": "Python",
+    "technologies": ["Jupyter Notebook", "Chatbot", "Machine Learning"],
+    "experience_weight": 82,
+    "is_fork": false,
+    "url": "https://github.com/HerambVE/chat-bot"
+  },
+  {
+    "name": "pendrive-listing",
+    "description": "CLI tool for checking removable drive authenticity using read/write operations. (in progress) ",
+    "type": "systems",
+    "primary_language": "C++",
+    "technologies": ["C++", "CLI", "File I/O", "Systems Programming"],
+    "experience_weight": 78,
+    "is_fork": false,
+    "url": "https://github.com/HerambVE/PENCHK"
+  },
+  {
+    "name": "hospital-footfall",
+    "description": "Semester project implemented in Jupyter Notebook for academic purposes.",
+    "type": "academic",
+    "primary_language": "Python",
+    "technologies": ["Python", "Jupyter Notebook", "Data Handling"],
+    "experience_weight": 65,
+    "is_fork": false,
+    "url": "https://github.com/HerambVE/hospital0ftfal"
+  },
+  {
+    "name": "portfolio-website",
+    "description": "Personal portfolio website showcasing projects and skills.",
+    "type": "personal",
+    "primary_language": "JavaScript",
+    "technologies": ["Web Development", "Frontend"],
+    "experience_weight": 95,
+    "is_fork": false,
+    "url": "https://github.com/HerambVE/personal0website"
+  }
+]

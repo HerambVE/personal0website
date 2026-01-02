@@ -6,9 +6,9 @@ import {
   poppins,
   gabarito
 } from "../styles/fonts";
-import Landing from "../styles/toggle";
+import Navbar from "../styles/navbar";
+import Footer from "../styles/footer";
 import "./globals.css";
-import {Github , Linkedin , Resume, Twitter} from "../styles/icon"
 
 export const metadata = {
   title: "Heramb Vengurlekar - Portfolio Website",
@@ -52,37 +52,11 @@ export default function RootLayout({ children }) {
         ${courierPrime.className}
       `}
     >
-      <body className="px-[1.5%]">
-      <div className='inline-flex justify-between w-[98%] h-fit px-[7.5%] py-[1%] fixed place-self-start'>
-                  <div className={`${gabarito.className} font-black text-cyan-50 text-5xl`}><Landing/></div>
-                  <nav className='w-auto justify-self-end'>
-                      <a className={`${gabarito.className} border-b-2 border-cyan-50 text-cyan-50 text-[3vh] ml-[4.5vw] py-[2%]`} href="">Welcome</a>
-                      <a className={`${gabarito.className} border-b-2 border-cyan-50 text-cyan-50 text-[3vh] ml-[4.5vw] py-[2%]`} href="">About Me</a>
-                      <a className={`${gabarito.className} border-b-2 border-cyan-50 text-cyan-50 text-[3vh] ml-[4.5vw] py-[2%]`} href="">Blog</a>
-                  </nav>
-              </div>
+      <body className="px-[0%] h-fit">
+      <Navbar/>
       {children}
-      <footer className={`${poppins.className} flex justify-between py-[1.3%] text-cyan-50 h-fit px-[7.5%]`}>
-        <div className="inline-flex space-x-6">
-          <a href="https://github.com/HerambVE">
-          <Github/>
-          </a>
-          <a href="https://x.com/HerambVE">
-          <Twitter/>
-          </a>
-          <a href="https://www.linkedin.com/in/herambve/">
-          <Linkedin/>
-          </a>
-          <a href="">
-          <Resume/>
-          </a>
-        </div>
-        <div className="text-[1.2rem]">
-        30-12-2025 | @HerambVE
-        </div>
-      </footer>
-      </body>
-      
+      <Footer/>
+      </body>     
     </html>
   );
 }

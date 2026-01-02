@@ -14,16 +14,15 @@ export default function Readme(){
       AI & Backend-focused engineering student passionate about building
       emotion-aware systems, scalable APIs, and cloud-native applications.
     </p>
-
-    <h2>Tech Stack</h2>
+    <br />
     <ul>
       <li><strong>Languages:</strong> C/C++, Python, JavaScript</li>
-      <li><strong>Frameworks:</strong> PyTorch, React, Node.js, Flask</li>
+      <li><strong>Frameworks & Libraries:</strong> PyTorch, React(vite), NextJs, Node.js, Flask,<br/> Tailwind CSS, Pandas, Matplotlib</li>
       <li><strong>Cloud:</strong> AWS (Lambda, API Gateway, DynamoDB)</li>
     </ul>
 
     <blockquote className="mt-[2%]">
-      Create Bugs; Solve them; Get better iteratively !
+    <strong>Create Bugs; Solve them; Get better iteratively !</strong>
     </blockquote>
   </div>
 </div>
